@@ -1,0 +1,44 @@
+total_pendapatan = 0
+jumlah_transaksi = 7
+i = 1
+
+while i <= jumlah_transaksi:
+    print(f"\nTransaksi ke-{i}")
+    harga = int(input("Masukkan harga barang: "))
+    jumlah = int(input("Masukkan jumlah barang: "))
+
+    subtotal = harga * jumlah
+    total_pendapatan = total_pendapatan + subtotal
+
+    if subtotal >= 200000:
+        kategori = "Penjualan Besar"
+    elif subtotal >= 100000:
+        kategori = "Penjualan Sedang"
+    elif subtotal >= 50000:
+        kategori = "Penjualan Kecil"
+    else:
+        kategori = "Penjualan Rendah"
+
+    print(f"Kategori: {kategori}")
+    print(f"Subtotal: Rp{subtotal}")
+    i = i + 1
+
+rata_rata = total_pendapatan / jumlah_transaksi
+
+print("\n--- Rekap Penjualan ---")
+print(f"Total Pendapatan: Rp{total_pendapatan}")
+print(f"Rata-rata Pendapatan: Rp{rata_rata}")
+
+"""
+A. Instruksi pengerjaan
+    1. Perbaiki seluruh kesalahan sintaks dan logika pada program.
+    2. Pastikan program melakukan 5 transaksi menggunakan perulangan while.
+    3. Perbaiki perhitungan subtotal, kategori penjualan, dan akumulasi pendapatan.
+
+B. Instruksi modifikasi
+    Setelah program berhasil diperbaiki, lakukan modifikasi berikut:
+    1. Ubah jumlah transaksi menjadi 7 transaksi.
+
+Ketentuan: Tetap gunakan perulangan while dan percabangan if-elif-else.
+
+"""
